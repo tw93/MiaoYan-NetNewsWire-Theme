@@ -1,0 +1,1024 @@
+/* Import web font as fallback if local font not available */
+@import url('https://gw.alipayobjects.com/os/k/jinkai/style.css');
+
+body {
+	margin-left: auto;
+	margin-right: auto;
+	/* Local font first, then web font, then system fallbacks */
+	font-family: "TsangerJinKai02", "苹方", "PingFang SC", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Arial, sans-serif !important;
+	word-wrap: break-word;
+	max-width: 48em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	overscroll-behavior: none;
+	background: var(--background);
+}
+
+.feedHeader {
+	margin: auto;
+  margin-top:-32px;
+	text-align: left;
+	font-style: normal;
+}
+
+.articleMeta {
+	margin-top: 8px;
+}
+
+.systemMessage {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translateX(-55%) translateY(-50%);
+	-webkit-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+:root {
+	--header-table-border-color: rgba(0, 0, 0, 0.1);
+	--header-color: rgba(0, 0, 0, 0.3);
+	--body-code-color: rgba(38,38,38);
+	--system-message-color: #cbcbcb;
+	--feedlink-color: #39583E;
+	--article-title-color: #333;
+	--article-date-color: rgba(0, 0, 0, 0.3);
+	--table-cell-border-color: lightgray;
+	--text-color: rgb(68, 68, 68);
+	--faded: #999;
+	--background: #fdfdfd;
+	--light-bg: #EBEBEA;
+	--shadow: lightgray;
+	--link-color: #0066CC;
+	--accent-color: #39583E;
+}
+
+@media(prefers-color-scheme: dark) {
+	:root {
+		--header-color: rgba(255, 255, 255, 0.6);
+		--body-code-color: #d5d5d5;
+		--system-message-color: #5f5f5f;
+		--feedlink-color: #7FA884;
+		--article-title-color: #e0e0e0;
+		--article-date-color: rgba(255, 255, 255, 0.5);
+		--table-cell-border-color: dimgray;
+		--text-color: rgb(220, 220, 220);
+		--faded: #888;
+		--background: #1a1a1a;
+		--light-bg: #2a2a2a;
+		--shadow: #555;
+		--link-color: #6CB4EE;
+		--accent-color: #7FA884;
+	}
+}
+
+body code, body pre {
+	font-weight: 400;
+	color: var(--body-code-color);
+	border-radius: 4px;
+	font-family: "SF Mono", monospace;
+	font-size: 0.95em;
+	-webkit-hyphens: none;
+	hyphens: none;
+	letter-spacing: -.027em;
+	background: var(--light-bg);
+}
+
+body > .systemMessage {
+	color: var(--system-message-color);
+}
+
+.articleTitle h1 {
+	color: var(--article-title-color);
+	font-size: 45px;
+	font-weight: 800;
+	line-height: 1.3em;
+	text-align: left;
+	font-style: normal;
+	margin: 0 auto;
+	padding-bottom: 15px;
+}
+
+.articleBody {
+	margin-top: 20px;
+	line-height: 1.7;
+	letter-spacing: 0.5px;
+	color: var(--text-color);
+	text-rendering: optimizeLegibility;
+  font-weight: 400;
+  -webkit-font-smoothing: subpixel-antialiased;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  text-autospace: normal;
+}
+
+pre {
+	max-width: 100%;
+	margin: 0;
+	padding: 15px;
+	overflow: auto;
+	overflow-y: hidden;
+	word-wrap: normal;
+	word-break: normal;
+	line-height: 1.4286em;
+}
+
+code{
+	padding: 0.2em;
+}
+
+.nnw-overflow {
+	overflow-x: auto;
+}
+/*
+ Instead of the last-child bits, border-collapse: collapse
+ could have been used. However, then the inter-cell borders
+ overlap the table border, which looks bad.
+ */
+.nnw-overflow table {
+	margin-bottom: 1px;
+	border-spacing: 0;
+	border: 1px solid var(--table-cell-border-color);
+	font-size: inherit;
+}
+.nnw-overflow table table {
+	margin-bottom: 0;
+	border: none;
+}
+.nnw-overflow td, .nnw-overflow th {
+	-webkit-hyphens: none;
+	hyphens: none;
+	word-break: normal;
+	border: 1px solid var(--table-cell-border-color);
+	border-top: none;
+	border-left: none;
+	padding: 5px;
+}
+
+.nnw-overflow tr :matches(td, th):last-child {
+	border-right: none;
+}
+
+.nnw-overflow :matches(thead, tbody, tfoot):last-child > tr:last-child :matches(td, th) {
+	border-bottom: none;
+}
+.nnw-overflow td pre {
+	border: none;
+	padding: 0;
+}
+.nnw-overflow table[border="0"] {
+	border-width: 0;
+}
+
+img, figure, video, div, object {
+	max-width: 100%;
+	height: auto !important;
+	margin: 0 auto;
+}
+
+iframe {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+iframe.nnw-constrained {
+	max-height: 50vw;
+}
+
+.iframeWrap {
+	position: relative;
+	display: block;
+	padding-top: 56.25%;
+}
+
+.iframeWrap iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100% !important;
+	width: 100% !important;
+}
+
+blockquote {
+	background: var(--light-bg);
+	border-radius: 4px;
+	border-left: 4px solid var(--table-cell-border-color);
+	margin: 1.5em 0;
+	padding: 1em;
+	color: var(--text-color);
+	font-size: 1rem;
+	line-height: 1.7;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+blockquote > blockquote {
+  padding-left: 1em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  font-style: italic;
+}
+
+
+blockquote > *:first-child {
+	margin-block-start: 0px;
+}
+
+blockquote > *:last-child {
+	margin-block-end: 0px;
+}
+
+
+/* Feed Specific */
+
+.feedbin--article-wrap {
+	border-top: 1px solid var(--header-table-border-color);
+}
+
+/* Hide the external link at the bottom of Daring Fireball posts */
+
+.x-netnewswire-hide {
+	display: none;
+}
+
+/* see removeWpSmiley; this rule is kept in case a wp-smiley is encountered without alt text */
+
+.wp-smiley {
+   height: 1em;
+   max-height: 1em;
+}
+
+/* Twitter */
+
+.twitterAvatar {
+	vertical-align: middle;
+	border-radius: 4px;
+	height: 1.7em;
+	width: 1.7em;
+}
+
+.twitterUsername {
+	line-height: 1.2;
+	margin-left: 4px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.twitterScreenName {
+	font-size: 66%;
+}
+
+.twitterTimestamp {
+	font-size: 66%;
+}
+
+/*Block ads and junk*/
+
+iframe[src*="feedads"],
+iframe[src*="doubleclick"],
+iframe[src*="plusone.google"] {
+	display: none !important;
+}
+
+a[href*=".ads."],
+a[href*="feedads"],
+a[href*="doubleclick"],
+a[href*="//ads."],
+a[href*="api.tweetmeme"],
+a[href*="delicious.com/post?"],
+a[href*="digg.com/submit?"],
+a[href*="google.com/bookmarks/mark?"],
+a[href*="posterous.com/share?"],
+a[href*="tumblr.com/share?"],
+a[href*="linkedin.com/shareArticle?"],
+a[href*="facebook.com/share.php?"],
+a[href*="http://twitter.com/home?"],
+a[href*="addtoany.com/share_save"] {
+	display: none !important;
+}
+
+img[src*=".ads."],
+img[src*="//ads."],
+img[src*="doubleclick"],
+img[src*="feedads"],
+img[src*="feedburner"],
+img[src*="feedblitz"],
+img[src*="share-buttons"] {
+	display: none !important;
+}
+
+/* Newsfoot specific styles. Structural styles come first, theme styles second */
+.newsfoot-footnote-container {
+	position: relative;
+	display: inline-block;
+	z-index: 9999;
+}
+
+.newsfoot-footnote-popover {
+	position: absolute;
+	display: block;
+	padding: 0em 1em;
+	margin: 1em;
+	width: 32rem;
+	top: 0.75em;
+	font-size: 0.95rem;
+	max-width: none;
+	border-radius: 0.3em;
+	box-sizing: border-box;
+}
+
+.newsfoot-footnote-popover {
+	left: calc(-1 * (32vw - 1em));
+	right: calc(-1 * (32vw - 1em));
+}
+
+.newsfoot-footnote-popover-arrow {
+	content: '';
+	display: block;
+	width: 1em;
+	position: absolute;
+	top: -0.5em;
+	left: calc(50% - 0.5em);
+	height: 1em !important;
+	transform: rotate(45deg);
+	z-index:0;
+}
+.newsfoot-footnote-popover-inner {
+	border-radius: calc(0.3em - 1px);
+	padding: 1em;
+	position: relative;
+	z-index: 1;
+}
+
+.newsfoot-footnote-popover-inner :first-child {
+	margin-top: 0;
+}
+.newsfoot-footnote-popover-inner :last-child {
+	margin-bottom: 0;
+}
+
+.newsfoot-footnote-popover .reversefootnote,
+.newsfoot-footnote-popover .footnoteBackLink,
+.newsfoot-footnote-popover .footnote-return,
+.newsfoot-footnote-popover a[href*='#fn'] {
+	display: none;
+}
+
+sup[id^='fn'] {
+	vertical-align: baseline;
+}
+
+/* light / default */
+.newsfoot-footnote-popover {
+	background: #ccc;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 3px 6px rgba(0, 0, 0, 0.25);
+	color: black;
+	padding: 1px;
+}
+.newsfoot-footnote-popover-arrow {
+	background: #fafafa;
+	border: 1px solid #ccc;
+}
+.newsfoot-footnote-popover-inner {
+	background: #fafafa;
+}
+
+/* dark */
+@media screen and (prefers-color-scheme: dark) {
+	.newsfoot-footnote-popover {
+		background: #444;
+		color: rgb(224, 224, 224);
+	}
+	.newsfoot-footnote-popover-arrow {
+		background: #242424;
+		border: 1px solid #444;
+	}
+	.newsfoot-footnote-popover-inner {
+		background: #242424;
+	}
+}
+
+/* iOS Specific */
+@supports (-webkit-touch-callout: none) {
+
+	body {
+		margin-top: 3px;
+		margin-bottom: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	:root {
+		color-scheme: light dark;
+		--font-family: system-ui;
+		--font-size: 13px;
+		--primary-accent-color: #086AEE;
+		--secondary-accent-color: #086AEE;
+		--block-quote-border-color: rgba(8, 106, 238, 0.75);
+	}
+
+	@media(prefers-color-scheme: dark) {
+		:root {
+			--primary-accent-color: #2D80F1;
+			--secondary-accent-color: #5E9EF4;
+			--block-quote-border-color: rgba(94, 158, 244, 0.75);
+			--header-table-border-color: rgba(255, 255, 255, 0.2);
+		}
+	}
+
+	.avatar img {
+		border-radius: 4px;
+	}
+
+	.nnw-overflow table {
+		border: none;
+	}
+
+	.activityIndicatorWrap {
+		position: relative;
+	}
+
+	.activityIndicator {
+		z-index: 1;
+		width: 64px;
+		height: 64px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+}
+
+/* macOS Specific */
+@supports not (-webkit-touch-callout: none) {
+
+	body {
+		margin-top: 20px;
+		margin-bottom: 64px;
+		padding-left: 48px;
+		padding-right: 48px;
+	}
+
+	.smallText {
+		font-size: 14px;
+	}
+
+	.mediumText {
+		font-size: 16px;
+	}
+
+	.largeText {
+		font-size: 18px;
+	}
+
+	.xlargeText {
+		font-size: 20px;
+	}
+
+	.xxlargeText {
+		font-size: 22px;
+	}
+
+	:root {
+		color-scheme: light dark;
+		--accent-color: rgba(8, 106, 238, 1);
+		--block-quote-border-color: rgba(8, 106, 238, .50);
+	}
+
+	@media(prefers-color-scheme: dark) {
+		:root {
+			--accent-color: rgba(94, 158, 244, 1);
+			--block-quote-border-color: rgba(94, 158, 244, .50);
+			--header-table-border-color: rgba(255, 255, 255, 0.1);
+		}
+	}
+
+}
+
+h2, h3 {
+	margin-top: 2.5em;
+}
+
+h1 {
+	margin-top: 2em;
+	line-height: 1.15em;
+	padding-bottom: 15px;
+	margin-bottom: 5px;
+}
+
+figure {
+	margin-bottom: 2em;
+	margin-top: 2em;
+}
+
+figcaption {
+	font-size: 14px;
+	line-height: 1.3em;
+	margin-top: 0.5rem;
+	text-align: left;
+}
+
+figcaption:empty {
+	display: none;
+}
+
+img {
+	display: inline-block;
+	width: 100%;
+}
+
+body a {
+	font-weight: inherit;
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+.articleBody a {
+	text-decoration: none;
+	color: var(--link-color);
+}
+
+.avatar img {
+	border-radius: 4px;
+}
+
+a.footnote {
+	display: inline-block;
+	text-decoration: none;
+	padding: 0em 0em;
+	min-width: 1em;
+	text-align: center;
+	font-size: 0.8em;
+	line-height: 1em;
+	position:relative;
+	margin: 0px -2px;
+	top: -0.1em;
+	background: transparent;
+}
+
+
+body a.footnote,
+body a.footnote:visited,
+.newsfoot-footnote-popover + a.footnote:hover {
+	color: var(--link-color);
+}
+
+a.footnote:hover,
+.newsfoot-footnote-popover + a.footnote {
+	opacity: 0.8;
+}
+
+/* Enhanced styles from markdown.css */
+
+/* Improved list spacing */
+.articleBody ul,
+.articleBody ol {
+	margin-block-start: 13px;
+	margin-block-end: 28px;
+	padding-inline-start: 32px;
+}
+
+.articleBody ul {
+	list-style-type: disc;
+	padding-inline-start: 20px;
+}
+
+.articleBody ol {
+	list-style-type: decimal;
+	padding-inline-start: 28px;
+}
+
+.articleBody li {
+	margin: 8px 0;
+}
+
+.articleBody ul ul,
+.articleBody ul ol,
+.articleBody ol ul,
+.articleBody ol ol {
+	margin-block-start: 8px;
+	margin-block-end: 8px;
+}
+
+/* Better link hover effect */
+.articleBody a:hover {
+	opacity: 0.8;
+	transition: opacity 0.2s ease;
+}
+
+/* Image enhancements */
+.articleBody img {
+	border-radius: 8px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+.articleBody figure {
+	margin-top: 28px;
+	margin-bottom: 28px;
+	text-align: center;
+}
+
+.articleBody figcaption {
+	font-size: 14px;
+	color: var(--faded);
+	margin-top: 8px;
+	text-align: center;
+}
+
+/* Improved strong/bold text */
+.articleBody strong,
+.articleBody b {
+	font-weight: 700;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Better table spacing */
+.articleBody table {
+	margin-block-start: 20px;
+	margin-block-end: 28px;
+}
+
+/* Horizontal rule */
+.articleBody hr {
+	margin-block-start: 28px;
+	margin-block-end: 28px;
+	border: 0;
+	height: 1px;
+	background-color: var(--table-cell-border-color);
+}
+
+/* Code in paragraphs */
+.articleBody p code,
+.articleBody li code {
+	padding: 2px 6px;
+	margin: 0 2px;
+	background-color: var(--light-bg);
+	border-radius: 4px;
+	font-size: 0.9em;
+}
+
+/* Better pre/code blocks */
+.articleBody pre {
+	margin-block-start: 20px;
+	margin-block-end: 28px;
+	border-radius: 8px;
+	overflow-x: auto;
+}
+
+.articleBody pre code {
+	background: transparent;
+	padding: 0;
+	margin: 0;
+	font-size: 0.95em;
+}
+
+/* Typography improvements */
+.articleBody {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+}
+
+/* Better subscript and superscript */
+.articleBody sub,
+.articleBody sup {
+	position: relative;
+	font-size: 0.75em;
+	line-height: 0;
+	vertical-align: baseline;
+}
+
+.articleBody sup {
+	top: -0.5em;
+}
+
+.articleBody sub {
+	bottom: -0.25em;
+}
+
+/* Text selection */
+::selection {
+	background: #39583E;
+	color: #ffffff;
+}
+
+::-moz-selection {
+	background: #39583E;
+	color: #ffffff;
+}
+
+/* Smooth scrolling */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Focus styles */
+a:focus-visible {
+	outline: 2px solid var(--accent-color);
+	outline-offset: 2px;
+	border-radius: 2px;
+}
+
+/* Mark/highlight text */
+.articleBody mark {
+	background-color: rgba(255, 247, 0, 0.88);
+	color: inherit;
+	padding: 2px 4px;
+	border-radius: 2px;
+}
+
+@media(prefers-color-scheme: dark) {
+	.articleBody mark {
+		background-color: rgba(255, 247, 0, 0.3);
+	}
+}
+
+/* Improved heading styles */
+.articleBody h2,
+.articleBody h3,
+.articleBody h4,
+.articleBody h5,
+.articleBody h6 {
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+	line-height: 1.3;
+}
+
+.articleBody h2 {
+	font-size: 1.75em;
+	margin-top: 2em;
+}
+
+.articleBody h3 {
+	font-size: 1.5em;
+}
+
+.articleBody h4 {
+	font-size: 1.25em;
+}
+
+.articleBody h5,
+.articleBody h6 {
+	font-size: 1.1em;
+}
+
+/* Heading links */
+.articleBody h2 > a,
+.articleBody h3 > a,
+.articleBody h4 > a {
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+.articleBody h2 > a:hover,
+.articleBody h3 > a:hover,
+.articleBody h4 > a:hover {
+	color: var(--link-color);
+	transition: color 0.2s ease;
+}
+
+/* Abbreviations */
+.articleBody abbr[title] {
+	text-decoration: underline dotted;
+	cursor: help;
+	border-bottom: none;
+}
+
+/* Keyboard input */
+.articleBody kbd {
+	display: inline-block;
+	padding: 3px 6px;
+	font-family: "SF Mono", monospace;
+	font-size: 0.85em;
+	line-height: 1;
+	color: var(--text-color);
+	background-color: var(--light-bg);
+	border: 1px solid var(--table-cell-border-color);
+	border-radius: 4px;
+	box-shadow: 0 1px 0 var(--table-cell-border-color);
+}
+
+/* Details/Summary */
+.articleBody details {
+	margin: 1em 0;
+	padding: 0.5em 1em;
+	border: 1px solid var(--table-cell-border-color);
+	border-radius: 4px;
+}
+
+.articleBody summary {
+	cursor: pointer;
+	font-weight: 600;
+	padding: 0.5em 0;
+	user-select: none;
+}
+
+.articleBody summary:hover {
+	color: var(--accent-color);
+}
+
+/* Definition lists */
+.articleBody dl {
+	margin: 1.5em 0;
+}
+
+.articleBody dt {
+	font-weight: 700;
+	margin-top: 1em;
+}
+
+.articleBody dd {
+	margin-left: 2em;
+	margin-top: 0.5em;
+	color: var(--text-color);
+}
+
+/* Better nested blockquotes */
+.articleBody blockquote blockquote {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	border-left-width: 3px;
+	opacity: 0.9;
+}
+
+/* Video containers */
+.articleBody .video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	margin: 1.5em 0;
+	border-radius: 8px;
+}
+
+.articleBody .video-container iframe,
+.articleBody .video-container video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Feed link and metadata */
+.feedLink {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 14px;
+	color: var(--faded);
+}
+
+.feedAvatar {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	object-fit: cover;
+	flex-shrink: 0;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.feedLink a {
+	color: var(--faded);
+	text-decoration: none;
+	transition: opacity 0.2s ease;
+	font-weight: 400;
+}
+
+.feedLink a:hover {
+	opacity: 0.7;
+}
+
+.feedLink .separator {
+	color: var(--faded);
+	opacity: 0.5;
+}
+
+.feedLink time {
+	color: var(--faded);
+	font-size: 14px;
+}
+
+/* Article title enhancements */
+.articleTitle h1 {
+	transition: color 0.2s ease;
+}
+
+.articleTitle h1 a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.articleTitle h1 a:hover {
+	color: var(--link-color);
+}
+
+/* Better link styles */
+.articleBody a {
+	text-decoration: none;
+	transition: opacity 0.2s ease;
+}
+
+.articleBody a:hover {
+	opacity: 0.7;
+}
+
+
+/* Responsive images */
+.articleBody img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Image lazy loading placeholder */
+.articleBody img[loading="lazy"] {
+	background-color: var(--light-bg);
+	min-height: 200px;
+}
+
+/* Better table styling */
+.articleBody table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 0.95em;
+}
+
+.articleBody table th {
+	background-color: var(--light-bg);
+	font-weight: 600;
+	text-align: left;
+}
+
+.articleBody table td,
+.articleBody table th {
+	padding: 8px 12px;
+	border: 1px solid var(--table-cell-border-color);
+}
+
+.articleBody table tr:hover {
+	background-color: var(--light-bg);
+	transition: background-color 0.2s ease;
+}
+
+/* Code syntax highlighting improvements */
+.articleBody pre[class*="language-"] {
+	position: relative;
+}
+
+/* Footnote improvements */
+.articleBody sup a.footnote {
+	font-weight: 600;
+	text-decoration: none;
+	padding: 0 4px;
+}
+
+.articleBody sup a.footnote:hover {
+	text-decoration: underline;
+}
+
+/* Print styles */
+@media print {
+	body {
+		background: white;
+		color: black;
+		max-width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+	.feedHeader,
+	.feedLink {
+		display: none;
+	}
+
+	.articleBody {
+		margin-top: 0;
+	}
+
+	.articleTitle h1 {
+		color: black;
+		font-size: 32px;
+	}
+
+	.articleBody a {
+		color: black;
+		text-decoration: underline;
+	}
+
+	.articleBody img {
+		max-width: 100%;
+		page-break-inside: avoid;
+	}
+}

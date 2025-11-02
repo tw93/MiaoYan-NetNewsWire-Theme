@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Name</key>
+	<string>MiaoYan</string>
+	<key>ThemeIdentifier</key>
+	<string>com.tw93.themes.miaoyan</string>
+	<key>CreatorHomePage</key>
+	<string>https://tw93.fun/</string>
+	<key>CreatorName</key>
+	<string>Tw93</string>
+	<key>Version</key>
+	<integer>1</integer>
+</dict>
+</plist>

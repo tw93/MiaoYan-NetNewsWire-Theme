@@ -1,0 +1,52 @@
+
+<!-- Template Variables
+
+title: The title of the article
+preferred_link: The best link to associate with the article for linking out.
+
+external_link_label: A localized label for the external link.
+external_link_stripped: The external link minus the scheme. Useful for displaying the external link.
+external_link: The external link of the article if there is one provided by the author.
+
+feed_link_title: The name of the feed associated with this article.
+feed_link: The URL of the feed associated with this article.
+byline: HTML that combines all the authors and links to them if available.
+avatar_src: The image source URL for the feed icon / avatar.
+dateline_style: Either "articleDateline" or "articleDatelineTitle" depending on if the title was populated or not.
+
+datetime_long: Long version of a combined publish date and time.
+datetime_medium: Medium length version of a combined publish date and time.
+datetime_short: Short version of a combined publish date and time.
+
+date_long: Long version of the publish date.
+date_medium: Medium version of the publish date.
+date_short: Long version of the publish date.
+
+time_long: Long version of the publish time.
+time_medium: Medium version of the publish time.
+time_short: Long version of the publish time.
+
+text_size_class: The size class that the user has selected in Preferences for article text.
+body: The body of the article.
+
+-->
+
+<header class="feedHeader">
+	<h1 class="articleTitle">
+		<a href="[[external_link]]" rel="noopener noreferrer" target="_blank">[[title]]</a>
+	</h1>
+
+	<div class="articleMeta">
+		<div class="feedLink">
+			<img src="[[avatar_src]]" class="feedAvatar" alt="" />
+			<a href="[[feed_link]]">[[feed_link_title]]</a>
+			<span class="separator">·</span>
+			<time datetime="[[datetime_short]]">[[datetime_short]]</time>
+		</div>
+	</div>
+</header>
+
+<article class="articleBody [[text_size_class]]">
+	<div id="bodyContainer">[[body]]</div>
+</article>
+
