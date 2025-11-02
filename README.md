@@ -1,6 +1,6 @@
 <p align="center">
   <h1 align="center">MiaoYan · NetNewsWire Theme</h1>
-  <p align="center">清爽优雅的 NetNewsWire 主题，针对中文阅读优化</p>
+  <p align="center">A clean and elegant NetNewsWire theme optimized for Chinese reading.</p>
   <p align="center">
     <a href="https://github.com/tw93/MiaoYan-NetNewsWire-Theme/releases"><img src="https://img.shields.io/github/v/release/tw93/MiaoYan-NetNewsWire-Theme?display_name=tag&logo=github" alt="release"/></a>
     <a href="https://github.com/tw93/MiaoYan-NetNewsWire-Theme/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="license"/></a>
@@ -11,41 +11,37 @@
   <img src="https://cdn.tw93.fun/pic/DnMetl.png" alt="Screenshot" width="760"/>
 </p>
 
-## 特色
-- 极简设计，突出内容阅读
-- 经典蓝色链接与绿色强调色
-- 圆形源头像、细节圆角与过渡动画
-- 针对中文优化：0.5px 字距、1.7 行高
-- 同步支持浅色 / 深色模式，随系统自动切换
+## Features
+- Minimal design focused on reading
+- Classic blue links with green accent color
+- Circular feed avatars and smooth transitions
+- Chinese typography tuned: 0.5px letter-spacing, 1.7 line-height
+- Full light/dark support following system appearance
 
-## 一键安装
-```
-netnewswire://theme/add?url=https://github.com/tw93/MiaoYan-NetNewsWire-Theme/releases/latest/download/MiaoYan.nnwtheme.zip
-```
+## Installation
+- One‑click install: [Install this theme](netnewswire://theme/add?url=https://github.com/tw93/MiaoYan-NetNewsWire-Theme/releases/latest/download/MiaoYan.nnwtheme.zip)
+- Get NetNewsWire: https://netnewswire.com/
 
-- 下载 NetNewsWire：https://netnewswire.com/
-- Releases 下载（备用）：https://github.com/tw93/MiaoYan-NetNewsWire-Theme/releases
+## Color Scheme
+- Light: Links #0066CC, Accent #39583E, Text #444444, Background #FDFDFD
+- Dark: Links #6CB4EE, Accent #7FA884, Text #DCDCDC, Background #1A1A1A
 
-## 配色
-- 浅色：链接 #0066CC，强调 #39583E，文本 #444444，背景 #FDFDFD
-- 深色：链接 #6CB4EE，强调 #7FA884，文本 #DCDCDC，背景 #1A1A1A
+## Fonts
+- Body: TsangerJinKai02 preferred, fallback to system (macOS: PingFang SC / Windows: Microsoft YaHei)
+- Code: SF Mono
 
-## 字体
-- 正文字体：优先本地 TsangerJinKai02；回退系统字体（macOS: PingFang SC / Windows: Microsoft YaHei）
-- 代码字体：SF Mono
-
-## 兼容性
+## Compatibility
 - NetNewsWire 6.0+
-- macOS 11.0+（iOS 版本同样可用主题）
+- macOS 11.0+ (also works on iOS/iPadOS)
 
-## 更新日志
-- v1.0.0 初始发布：完整明暗主题、中文排版优化、圆形头像、简洁排版
+## Changelog
+- v1.0.0 Initial release: full light/dark, Chinese typography, circular avatars, clean layout
 
-## 作者
+## Author
 - Tw93 · https://tw93.fun · https://github.com/tw93
 
-## 许可协议
+## License
 MIT License
 
-## 致谢
-感谢 NetNewsWire 团队打造出色的 RSS 阅读器。
+## Acknowledgments
+Thanks to the NetNewsWire team for an excellent RSS reader.
