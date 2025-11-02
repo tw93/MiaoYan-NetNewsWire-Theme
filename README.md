@@ -43,7 +43,7 @@
 
 - If this theme improves your reading, consider starring the repo or sharing it with friends.
 - Have ideas or fixes? Open an issue or PR to help improve the theme.
-- Love cats? Treat Tangyuan and Cola via <https://miaoyan.app/cats.html?name=MiaoYan>
+- Love cats? Treat Tangyuan and Cola via [this link](https://miaoyan.app/cats.html?name=MiaoYan)
 
 ## Acknowledgments
 
