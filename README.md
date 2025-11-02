@@ -1,102 +1,51 @@
-# MiaoYan - NetNewsWire Theme
+<p align="center">
+  <h1 align="center">MiaoYan · NetNewsWire Theme</h1>
+  <p align="center">清爽优雅的 NetNewsWire 主题，针对中文阅读优化</p>
+  <p align="center">
+    <a href="https://github.com/tw93/MiaoYan-NetNewsWire-Theme/releases"><img src="https://img.shields.io/github/v/release/tw93/MiaoYan-NetNewsWire-Theme?display_name=tag&logo=github" alt="release"/></a>
+    <a href="https://github.com/tw93/MiaoYan-NetNewsWire-Theme/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="license"/></a>
+  </p>
+</p>
 
-A clean and elegant NetNewsWire theme optimized for Chinese reading experience.
+<p align="center">
+  <img src="https://cdn.tw93.fun/pic/DnMetl.png" alt="Screenshot" width="760"/>
+</p>
 
-![Screenshot](https://cdn.tw93.fun/pic/DnMetl.png)
+## 特色
+- 极简设计，突出内容阅读
+- 经典蓝色链接与绿色强调色
+- 圆形源头像、细节圆角与过渡动画
+- 针对中文优化：0.5px 字距、1.7 行高
+- 同步支持浅色 / 深色模式，随系统自动切换
 
-## Features
-
-### Visual Design
-
-- Minimalist design focused on content reading
-- Classic blue links with green accent color
-- Circular feed avatars
-- Perfect font rendering with antialiased and grayscale
-
-### Light and Dark Themes
-
-- Full support for macOS light/dark mode auto-switching
-- Light mode: Clean and bright white background
-- Dark mode: Eye-friendly dark background with optimized contrast
-
-### Reading Experience
-
-- Optimized Chinese typography with 0.5px letter-spacing and 1.7 line-height
-- Compact layout with article titles linking directly to original content
-- Smooth transitions for all links and interactive elements
-- Responsive design for different screen sizes
-
-### Detail Refinements
-
-- Gray blockquote borders
-- Rounded corners for code blocks and images
-- Optimized list and table styling
-- Print-friendly styles
-
-## Installation
-
-One-click install:
-
+## 一键安装
 ```
 netnewswire://theme/add?url=https://github.com/tw93/MiaoYan-NetNewsWire-Theme/releases/latest/download/MiaoYan.nnwtheme.zip
 ```
 
-Download NetNewsWire:
-- https://netnewswire.com/
+- 下载 NetNewsWire：https://netnewswire.com/
+- Releases 下载（备用）：https://github.com/tw93/MiaoYan-NetNewsWire-Theme/releases
 
-## Color Scheme
+## 配色
+- 浅色：链接 #0066CC，强调 #39583E，文本 #444444，背景 #FDFDFD
+- 深色：链接 #6CB4EE，强调 #7FA884，文本 #DCDCDC，背景 #1A1A1A
 
-### Light Mode
+## 字体
+- 正文字体：优先本地 TsangerJinKai02；回退系统字体（macOS: PingFang SC / Windows: Microsoft YaHei）
+- 代码字体：SF Mono
 
-- Links: `#0066CC` (Classic Blue)
-- Accent: `#39583E` (Deep Green)
-- Text: `#444444`
-- Background: `#FDFDFD`
-
-### Dark Mode
-
-- Links: `#6CB4EE` (Light Blue)
-- Accent: `#7FA884` (Light Green)
-- Text: `#DCDCDC`
-- Background: `#1A1A1A`
-
-## Fonts
-
-Primary font is TsangerJinKai02 with fallbacks to system fonts:
-
-- macOS: PingFang SC
-- Windows: Microsoft YaHei
-- Code: SF Mono
-
-The theme uses local fonts first, and falls back to web fonts from CDN if local fonts are not available.
-
-## Compatibility
-
+## 兼容性
 - NetNewsWire 6.0+
-- macOS 11.0+
-- iOS/iPadOS supported (via NetNewsWire iOS version)
+- macOS 11.0+（iOS 版本同样可用主题）
 
-## Changelog
+## 更新日志
+- v1.0.0 初始发布：完整明暗主题、中文排版优化、圆形头像、简洁排版
 
-### v1.0.0 (2025-10-30)
+## 作者
+- Tw93 · https://tw93.fun · https://github.com/tw93
 
-- Initial release
-- Complete light/dark theme support
-- Optimized Chinese typography
-- Circular feed avatars
-- Clean layout design
-
-## Author
-
-**Tw93**
-
-- Website: [https://tw93.fun/](https://tw93.fun/)
-- GitHub: [@tw93](https://github.com/tw93)
-
-## License
-
+## 许可协议
 MIT License
 
-## Acknowledgments
-
-Thanks to the NetNewsWire team for creating an excellent RSS reader.
+## 致谢
+感谢 NetNewsWire 团队打造出色的 RSS 阅读器。
