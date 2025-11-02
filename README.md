@@ -35,36 +35,14 @@ A clean and elegant NetNewsWire theme optimized for Chinese reading experience.
 
 ## Installation
 
-### Method 1: One-Click Install (Recommended)
-
-Click this link to install directly:
+One-click install:
 
 ```
 netnewswire://theme/add?url=https://github.com/tw93/MiaoYan-NetNewsWire-Theme/releases/latest/download/MiaoYan.nnwtheme.zip
 ```
 
-Or visit the [releases page](https://github.com/tw93/MiaoYan-NetNewsWire-Theme/releases) and download the latest version.
-
-### Method 2: Manual Installation
-
-1. Download `MiaoYan.nnwtheme.zip` from [releases](https://github.com/tw93/MiaoYan-NetNewsWire-Theme/releases)
-2. Unzip the file
-3. Open Finder and press `Cmd + Shift + G`, then enter:
-
-   ```
-   ~/Library/Containers/com.ranchero.NetNewsWire-Evergreen/Data/Library/Application Support/NetNewsWire/Themes/
-   ```
-
-4. Copy `MiaoYan.nnwtheme` to this directory
-5. Restart NetNewsWire
-6. Select MiaoYan theme in NetNewsWire preferences
-
-### Method 3: Via Git
-
-```bash
-cd ~/Library/Containers/com.ranchero.NetNewsWire-Evergreen/Data/Library/Application\ Support/NetNewsWire/Themes/
-git clone https://github.com/tw93/MiaoYan-NetNewsWire-Theme.git MiaoYan.nnwtheme
-```
+Download NetNewsWire:
+- https://netnewswire.com/
 
 ## Color Scheme
 
