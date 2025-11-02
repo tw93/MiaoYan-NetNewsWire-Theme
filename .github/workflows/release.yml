@@ -1,0 +1,22 @@
+name: Release theme
+on:
+  push:
+    tags:
+      - 'v*'
+permissions:
+  contents: write
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package theme
+        run: |
+          mkdir -p dist
+          rsync -a --delete --exclude '.git' --exclude '.github' --exclude 'dist' ./ dist/MiaoYan.nnwtheme/
+          cd dist
+          zip -r MiaoYan.nnwtheme.zip MiaoYan.nnwtheme
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/MiaoYan.nnwtheme.zip
