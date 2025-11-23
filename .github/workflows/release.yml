@@ -2,7 +2,7 @@ name: Release theme
 on:
   push:
     tags:
-      - 'v*'
+      - 'V*'
 permissions:
   contents: write
 jobs:
